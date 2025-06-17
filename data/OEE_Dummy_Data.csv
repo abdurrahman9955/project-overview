@@ -1,0 +1,64 @@
+OEE CALCULATION WORKSHEET (WITH TEEP & MAINTENANCE COSTS),,,,,,
+,,,,,,
+BASIC DATA (CONSTANTS),,,,,,
+Shift Length (minutes),480,,,,,
+Planned Breaks (minutes),30,,,,,
+Meal Breaks (minutes),30,,,,,
+Ideal Cycle Time (seconds),12,,,,,
+Ideal Cycle Time (minutes),=B16/60,,,,,
+Ideal Production Rate (units/minute),=1/B17,,,,,
+Total Possible Shifts/Month,60,,,,,
+Total Possible Days/Month,30,,,,,
+,,,,,
+
+MONTHLY OEE & TEEP SUMMARY,,,,,,
+Month,Availability (%),Performance (%),Quality (%),OEE (%),TEEP (%)
+January,84.05%,88.27%,97.05%,72.00%,54.00%
+February,86.20%,90.15%,97.80%,76.12%,57.09%
+March,82.30%,85.45%,96.20%,67.65%,50.74%
+April,88.75%,92.10%,98.30%,80.42%,60.32%
+May,89.50%,93.25%,98.50%,82.18%,61.64%
+,,,,,
+
+TEEP CALCULATION,,,,,,
+Month,Scheduled Shifts,Actual Shifts,Utilization (%),OEE (%),TEEP (%)
+January,60,54,90.00%,72.00%,=E32*F32/100
+February,60,56,93.33%,76.12%,=E33*F33/100
+March,60,52,86.67%,67.65%,=E34*F34/100
+April,60,58,96.67%,80.42%,=E35*F35/100
+May,60,58,96.67%,82.18%,=E36*F36/100
+,,,,,
+
+MAINTENANCE COSTS BREAKDOWN,,,,,,
+Month,Preventive (£),Corrective (£),Downtime Cost (£),Total (£),% of Revenue
+January,8500,12500,18200,39200,2.45%
+February,8800,11000,16800,36600,2.18%
+March,9000,15200,21500,45700,2.85%
+April,8700,9800,14200,32700,1.92%
+May,8600,9200,12800,30600,1.75%
+,,,,,
+
+DOWNTIME COST ANALYSIS,,,,,,
+Month,Downtime (min),Cost/Min (£),Total Cost (£),Root Cause (Top 3),,
+January,860,21.18,18200,Machine Breakdowns (42%), Changeovers (33%), Material Shortages (15%)
+February,720,23.33,16800,Changeovers (38%), Operator Errors (25%), IT Issues (20%)
+March,920,23.37,21500,Machine Breakdowns (51%), Training (22%), Power Outages (12%)
+April,610,23.28,14200,PM Delays (35%), Calibration (30%), Tooling (18%)
+May,550,23.27,12800,Supplier QC (40%), Changeovers (30%), Minor Stoppages (15%)
+,,,,,
+
+COST PER UNIT IMPACT,,,,,,
+Month,OEE (%),Maintenance Cost/Unit (£),Downtime Cost/Unit (£),TEEP (%),,
+January,72.00%,0.81,0.38,54.00%,,
+February,76.12%,0.71,0.33,57.09%,,
+March,67.65%,1.00,0.47,50.74%,,
+April,80.42%,0.60,0.26,60.32%,,
+May,82.18%,0.55,0.23,61.64%,,
+,,,,,
+
+KEY INSIGHTS (WORST MONTH = MARCH),,,,,,
+Metric,March Value,May Value,Improvement,,
+OEE,67.65%,82.18%,+14.53pp,,
+TEEP,50.74%,61.64%,+10.90pp,,
+Downtime Cost/Unit,£0.47,£0.23,-51%,,
+Maintenance Cost/Unit,£1.00,£0.55,-45%,,
